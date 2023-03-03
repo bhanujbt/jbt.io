@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="#">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .popup {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            background: #EDEDED;
+        }
+
+        .popup .inner {
+            display: flex;
+            flex-direction: column;
+            width: 70em;
+            padding-right: 1.4em;
+            padding-left: 1.4em;
+        }
+
+        .popup .inner .tophead {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .popup .inner .tophead a {
+            width: 9.375em;
+        }
+
+        .popup .inner .tophead a img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .popup .inner .tophead .social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .popup .inner .tophead .social .socialicon {
+            width: 2.575em;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .popup .inner .tophead .social .socialicon img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .popup .inner .tophead .social .search,
+        .popup .inner .tophead .social .close {
+            width: 1.5em;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .popup .inner .tophead .social .search {margin-left: 1.4em;}
+
+        .popup .inner .tophead .social .search img,
+        .popup .inner .tophead .social .close img {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .popup .trending {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            background: white;
+            border-radius: 10px;
+            align-content: center;
+            padding-top: 0.9em;
+            padding-bottom: 0.8em;
+            padding-left: 1.3em;
+            overflow: auto;
+        }
+
+        .popup .trending .head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+        .popup .cards .head {
+            border-bottom: #ef412f solid 2px;
+            margin-bottom: 0.4em;
+        }
+        .popup .head h4,
+        .popup .head img {
+            margin-right: 0.7em;
+            font-size: 1.5em;
+            color: #EF412F;
+        }
+        .popup .text {
+            font-size:1.2em;
+        }
+        .popup .text span{
+            padding-top: 0.4em;
+        }
+        .popup .text span:hover {
+            font-size:1.25em;
+            color: #EF412F;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .popup .head img {
+            width: 0.5em;
+        }
+
+        .popup .trending a {
+            margin-left: 0.7em;
+            margin-right: 0.7em;
+            display: flex;
+            align-items: center;
+            min-width: fit-content;
+            font-size: 0.95em;
+        }
+        .popup .newsflex{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: auto;
+        }
+        .popup .newsflex .cards{
+            flex: 1 1 16%;
+            margin-top: 1.4em;
+            background: white;
+            border-radius: 10px;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 1.4em;
+            padding-right: 1.4em;
+            height: fit-content;
+        }
+        .popup .newsflex .cards .text {
+            display:flex;
+            flex-direction: column;
+        }
+        .betweencard {
+            margin-right: 1em;
+        }
+        @media (max-width: 800px) {
+            .popup .newsflex .cards{
+                flex:1 1 40%;
+            }
+            .popup .inner {
+                min-width: 20em;
+            }
+            .popup .socialicon {
+                display:none;
+            }
+            .popup .inner .tophead a {
+                width:7.67em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="inner">
+            <div class="tophead">
+                <a href="#" class="logo">
+                    <img src="jbt-logo.svg" alt="jbt india"></a>
+                <div class="social">
+                    <div class="socialicon"><img src="facebookpop.svg" alt="facebook"></div>
+                    <div class="socialicon"><img src="instapop.svg" alt="instagram"></div>
+                    <div class="socialicon"><img src="twitterpop.svg" alt="twitter"></div>
+                    <div class="socialicon"><img src="youtubepop.svg" alt="youtube"></div>
+                    <div class="socialicon"><img src="linkedinpop.svg" alt="linked in"></div>
+                    <div class="search"><img src="searchblck.svg" alt="searchjbt"></div>
+                    <div class="close"><img src="close.svg" alt="closepopup"></div>
+                </div>
+            </div>
+            <div class="trending">
+                <div class="head">
+                    <h4>ट्रेंडिंग</h4><img src="Trendingicon.svg" alt="trending">
+                </div>
+                <a>मनीष शिशोदिया</a>
+                <a>उपेन्द्र कुशवाहा</a>
+                <a>धीरेन्द्र कृष्णा शाश्त्री</a>
+                <a>#WPL</a>
+                <a>सेल्फी</a>
+                <a>#WPL</a>
+                <a>कारोबार</a>
+                <a>CM योगी</a>
+                <a>टेक बाज़ार</a>
+                <a>केजरीवाल</a>
+                <a>#Delhi</a>
+                <a>वारदात</a>
+            </div>
+            <div class="newsflex">
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards ">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards betweencard">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="head">
+                        <h4>पॉलिटिक्स</h4>
+                    </div>
+                    <div class="text">
+                        <span>राष्ट्रीय</span>
+                        <span>दुनिया</span>
+                        <span>राज्य</span>
+                        <span>दिल्ली</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

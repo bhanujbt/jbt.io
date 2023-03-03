@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBT News</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="header.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div class="headwrap">
+        <div class="lang">
+            <div class="lang-block"><a href="/hindi">हिन्दी</a>
+                <a href="/">English</a>
+                <a href="/marathi">मराठी</a>
+                <a href="/bengali">বাংলা</a>
+                <a href="/tamil">தமிழ்</a>
+                <a href="/malayalam">മലയാളം</a>
+                <a href="/gujarati">ગુજરાતી</a>
+                <a href="/telugu">తెలుగు</a>
+                <a href="/kannada">ಕನ್ನಡ</a>
+                <a href="#">बिज़नस</a>
+                <a href="#">टेक्नोलॉजी</a>
+                <span
+                    id="feature-text"></span><!-------------=========== Autotyping class will work here ===========--------------------->
+            </div>
+            <div class="socialtop">
+                <img src="fbwhite.svg" alt="facebook">
+                <img src="twitterwhite.svg" alt="facebook">
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="tophead">
+                <div class="leftmenu" onclick="showPopup()"><img src="/menuicon.svg" alt="hamicon" class="hicon"></div>
+                <a href="#home" class="logo"><img src="jbt-logo.svg" alt="jan bhawana times" class="jbt-logo"></a>
+                <div class="topicons">
+                    <div class="iconhold mobhidden">
+                        <img src="webstories.svg" alt="web-stories" class="mobhidden">
+                    </div>
+                    <div class="text mobhidden">
+                        <span class="icontext">वेब स्टोरीज</span>
+                    </div>
+                    <div class="iconhold mobhidden">
+                        <img src="podcast-img.svg" alt="podcast" class=" mobhidden">
+                    </div>
+                    <div class="text mobhidden">
+                        <span class="icontext">पॉडकास्ट</span>
+                    </div>
+                    <div class="iconhold mobhidden">
+                        <img src="livetv.svg" alt="liveTv" class="mobhidden">
+                    </div>
+                    <div class="text mobhidden">
+                        <span class="icontext">लाइव टीवी</span>
+                    </div>
+                    <div class="iconhold mobhidden">
+                        <img src="e-paper.svg" alt="e-paper" class="sicon mobhidden">
+                    </div>
+                    <div class="text mobhidden">
+                        <span class="icontext">ई-पेपर</span>
+                    </div>
+                    <div class="iconhold">
+                        <img src="search-icon.svg" alt="search-icon">
+                    </div>
+                    <div class="text mobhidden">
+                        <span class="icontext">सर्च करें</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linkwrap">
+            <div id="megamenu" class="megamenu" onmouseover="showmega()" onmouseout="closemega()">
+                <div class="menucontainer">
+                    <div class="catnav">
+                        <a id="megaactive1" href="#" class="category active" onmouseover="showOne()">सभी</a>
+                        <a id="megaactive2" href="#" class="category" onmouseover="showtwo()">फैशन ट्रेंड्स</a>
+                        <a id="megaactive3" href="#" class="category" onmouseover="showthree()">हेल्थ टिप्स</a>
+                        <a id="megaactive4" href="#" class="category" onmouseover="showfour()">हेल्दी फूड</a>
+                    </div>
+                    <div id="one" class="menutab">
+                        <div class="menuflex">
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="banana.svg" alt="banana" class="info">
+                                    <p>केलेशुगर के मरीजों के लिए केला सेहतमंद है या सानदायक? यहाँ जानिए!</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="mulethi.svg" alt="mulethi" class="info">
+                                    <p>मुलेठी की जड़ स्वस्थ त्वचा के लिए लिकोरिस रूट के पोषण संबंधी लाभ</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="skincare.svg" alt="skincare" class="info">
+                                    <p>अपनी त्वचा को मॉइस्चराइज करने के लिए घर पर ही पैक बनाएं</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="heartattack.svg" alt="heartattack" class="info">
+                                    <p>हार्ट अटैक: हार्ट ट्यूब क्यों ब्लॉक हो जाती हैं?</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="cancer.svg" alt="cancer" class="info">
+                                    <p>एक नया उपकरण रक्त परीक्षण के माध्यम से कैंसर कोशिकाओं का पता लगा सकता है</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="valentine.svg" alt="valentine" class="info">
+                                    <p>इस वैलेंटाइन वीक में आपका पार्टनर स्पेशल सरप्राइज गिफ्ट का हकदार है</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="two" class="menutab">
+                        <div class="menuflex">
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="banana.svg" alt="banana" class="info">
+                                    <p>केलेशुगर के मरीजों के लिए केला सेहतमंद है या सानदायक? यहाँ जानिए!</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="mulethi.svg" alt="mulethi" class="info">
+                                    <p>मुलेठी की जड़ स्वस्थ त्वचा के लिए लिकोरिस रूट के पोषण संबंधी लाभ</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="skincare.svg" alt="skincare" class="info">
+                                    <p>अपनी त्वचा को मॉइस्चराइज करने के लिए घर पर ही पैक बनाएं</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="heartattack.svg" alt="heartattack" class="info">
+                                    <p>हार्ट अटैक: हार्ट ट्यूब क्यों ब्लॉक हो जाती हैं?</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="three" class="menutab">
+                        <div class="menuflex">
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="skincare.svg" alt="skincare" class="info">
+                                    <p>अपनी त्वचा को मॉइस्चराइज करने के लिए घर पर ही पैक बनाएं</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="heartattack.svg" alt="heartattack" class="info">
+                                    <p>हार्ट अटैक: हार्ट ट्यूब क्यों ब्लॉक हो जाती हैं?</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="cancer.svg" alt="cancer" class="info">
+                                    <p>एक नया उपकरण रक्त परीक्षण के माध्यम से कैंसर कोशिकाओं का पता लगा सकता है</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="valentine.svg" alt="valentine" class="info">
+                                    <p>इस वैलेंटाइन वीक में आपका पार्टनर स्पेशल सरप्राइज गिफ्ट का हकदार है</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="four" class="menutab">
+                        <div class="menuflex">
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="banana.svg" alt="banana" class="info">
+                                    <p>केलेशुगर के मरीजों के लिए केला सेहतमंद है या सानदायक? यहाँ जानिए!</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="mulethi.svg" alt="mulethi" class="info">
+                                    <p>मुलेठी की जड़ स्वस्थ त्वचा के लिए लिकोरिस रूट के पोषण संबंधी लाभ</p>
+                                </div>
+                            </div>
+
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="cancer.svg" alt="cancer" class="info">
+                                    <p>एक नया उपकरण रक्त परीक्षण के माध्यम से कैंसर कोशिकाओं का पता लगा सकता है</p>
+                                </div>
+                            </div>
+                            <div class="infobox">
+                                <div class="infohold">
+                                    <img src="valentine.svg" alt="valentine" class="info">
+                                    <p>इस वैलेंटाइन वीक में आपका पार्टनर स्पेशल सरप्राइज गिफ्ट का हकदार है</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="linkoverflow">
+                <a class="link"><img src="home-icon.svg" alt="home-icon" class="home"></a>
+                <a class="link">देश</a>
+                <a class="link">विदेश</a>
+                <a class="link">राज्य</a>
+                <a class="link">मनोरंजन</a>
+                <a class="link" onmouseover="showmega()" onmouseout="closemega()"><span>लाइफस्टाइल</span>
+                </a>
+                <a class="link">खेल</a>
+                <a class="link">कारोबार</a>
+                <a class="link">वायरल</a>
+                <a class="link">टेक्नोलॉजी</a>
+                <a class="link">धर्म</a>
+                <a class="link">विडियो</a>
+                <a class="link">ई-पेपर</a><!--
+                <a class="link" onclick="showPopup()"><img src="rightmenu.svg" alt="hamburger-icon" class="menu"></a>-->
+            </div>
+        </div>
+        <div class="hashwrap">
+            <div class="linkoverflow">
+                <a>मनीष शिशोदिया</a>
+                <a>उपेन्द्र कुशवाहा</a>
+                <a>धीरेन्द्र कृष्णा शाश्त्री</a>
+                <a>#WPL</a>
+                <a>सेल्फी</a>
+                <a>#WPL</a>
+                <a>कारोबार</a>
+                <a>CM योगी</a>
+                <a>टेक बाज़ार</a>
+                <a>केजरीवाल</a>
+                <a>#Delhi</a>
+                <a>वारदात</a>
+                <a>#Gadgets</a>
+                <a>#ISRO</a>
+                <a>ऑटो</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="inner">
+            <div class="langselect">
+                <a href="/">ENG</a>
+                <a href="/">हिन्</a>
+                <a href="/marathi">मार</a>
+                <a href="/bengali">বাং</a>
+                <a href="/tamil">தமி</a>
+                <a href="/malayalam">മല</a>
+                <a href="/gujarati">ગુજ</a>
+                <a href="/telugu">తెలు</a>
+                <a href="/kannada">ಕನ್ನ</a>
+            </div>
+            <div class="tophead">
+                <a href="#" class="logo">
+                    <img src="jbt-logo.svg" alt="jbt india">
+                </a>
+                <div class="social">
+                    <div class="socialicon"><img src="facebookpop.svg" alt="facebook"></div>
+                    <div class="socialicon"><img src="instapop.svg" alt="instagram"></div>
+                    <div class="socialicon"><img src="twitterpop.svg" alt="twitter"></div>
+                    <div class="socialicon"><img src="youtubepop.svg" alt="youtube"></div>
+                    <div class="socialicon"><img src="linkedinpop.svg" alt="linked in"></div>
+                    <div class="search"><img src="searchblack.svg" alt="searchjbt"></div>
+                    <div class="close" onclick="closePopup()"><img src="close.svg" alt="closepopup"></div>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="mobicons"><img src="livetvblack.svg" alt=""><span>लाइव टीवी</span></div>
+                <div class="mobicons"><img src="webstoriesblack.svg" alt=""><span>वेब स्टोरीज</span></div>
+                <div class="mobicons"><img src="podcastblack.svg" alt=""><span>पॉडकास्ट</span></div>
+                <div class="mobicons"><img src="epaperblack.svg" alt=""><span>इ-पेपर</span></div>
+            </div>
+            <div class="cattrend">
+                <div class="trending">
+                    <div class="head">
+                        <h4>आज की ट्रेंडिंग खबरें</h4>
+                    </div>
+                    <a>मनीष शिशोदिया</a>
+                    <a>उपेन्द्र कुशवाहा</a>
+                    <a>भारत / ऑस्ट्रेलिया</a>
+                    <a>क्रिकेट की जानकारी</a>
+                    <a>इलेक्शन २०२३</a>
+                    <a>मेघालय इलेक्शन</a>
+                    <a>त्रिपुरा इलेक्शन</a>
+                    <a>नागालैंड इलेक्शन</a>
+                    <a>सीएम योगी आदित्यनाथ</a>
+                    <a>नरेन्द्र मोदी</a>
+                    <a>विराट कोहली</a>
+                    <a>मनोरंजन न्यूज़</a>
+                </div>
+                <div class="newsflex">
+                    <div class="cards">
+                        <div id="cat1input" class="head" onclick="categoryone()">
+                            <h4>पॉलिटिक्स</h4>
+                        </div>
+                        <div id="cat1" class="text">
+                            <span>राष्ट्रीय खबरें</span>
+                            <span>ताज़ा खबरें</span>
+                            <span>दुनिया खबरें</span>
+                            <span>राज्य खबरें</span>
+                            <span>दिल्ली की खबरें</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat2input" class="head" onclick="categorytwo()">
+                            <h4>दुनिया</h4>
+                        </div>
+                        <div id="cat2" class="text">
+                            <span>पाकिस्तान खबरें</span>
+                            <span>चीन खबरें</span>
+                            <span>अमेरिका खबरें</span>
+                            <span>ब्रिटेन खबरें</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat3input" class="head" onclick="categorythree()">
+                            <h4>इलेक्शन खबरें</h4>
+                        </div>
+                        <div id="cat3" class="text">
+                            <span>त्रिपुरा इलेक्शन</span>
+                            <span>मेघालय इलेक्शन</span>
+                            <span>नागालैंड इलेक्शन</span>
+                            <span>गुजरात चुनाव</span>
+                            <span>हिमाचल चुनाव</span>
+                        </div>
+                    </div>
+                    <div class="cards ">
+                        <div id="cat4input" class="head" onclick="categoryfour()">
+                            <h4>बिज़नस खबरें</h4>
+                        </div>
+                        <div id="cat4" class="text">
+                            <span>पेट्रोल डीजल</span>
+                            <span>टैक्स निवेश समाचार</span>
+                            <span>शेयर मार्किट समाचार</span>
+                            <span>बजट २०२३</span>
+                            <span>रियल एस्टेट</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat5input" class="head" onclick="categoryfive()">
+                            <h4>पॉलिटिक्स</h4>
+                        </div>
+                        <div id="cat5" class="text">
+                            <span>राष्ट्रीय</span>
+                            <span>दुनिया</span>
+                            <span>राज्य</span>
+                            <span>दिल्ली</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat6input" class="head" onclick="categorysix()">
+                            <h4>पॉलिटिक्स</h4>
+                        </div>
+                        <div id="cat6" class="text">
+                            <span>राष्ट्रीय</span>
+                            <span>दुनिया</span>
+                            <span>राज्य</span>
+                            <span>दिल्ली</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat7input" class="head" onclick="categoryseven()">
+                            <h4>पॉलिटिक्स</h4>
+                        </div>
+                        <div id="cat7" class="text">
+                            <span>राष्ट्रीय</span>
+                            <span>दुनिया</span>
+                            <span>राज्य</span>
+                            <span>दिल्ली</span>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div id="cat8input" class="head" onclick="categoryeight()">
+                            <h4>पॉलिटिक्स</h4>
+                        </div>
+                        <div id="cat8" class="text">
+                            <span>राष्ट्रीय</span>
+                            <span>दुनिया</span>
+                            <span>राज्य</span>
+                            <span>दिल्ली</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const carouselText = [
+            { text: "Delhi: सीएम केजरीवाल ने आप विधायक के साथ की बैठक, जल्द ले सकते है बड़ा फैसला", color: "#a7a7a7" },
+            { text: "'कहानी अभी खत्म नहीं हुई...'भूल भुलैया 3 के साथ वापस आ रहे हैं रूह बाबा, कार्तिक ने शेयर किया वीडियो", color: "#a7a7a7" }
+        ]
+
+        $(document).ready(async function () {
+            carousel(carouselText, "#feature-text")
+        });
+
+        async function typeSentence(sentence, eleRef, delay = 100) {
+            const letters = sentence.split("");
+            let i = 0;
+            while (i < letters.length) {
+                await waitForMs(delay);
+                $(eleRef).append(letters[i]);
+                i++
+            }
+            return;
+        }
+
+        async function deleteSentence(eleRef) {
+            const sentence = $(eleRef).html();
+            const letters = sentence.split("");
+            let i = 0;
+            while (letters.length > 0) {
+                await waitForMs(100);
+                letters.pop();
+                $(eleRef).html(letters.join(""));
+            }
+        }
+
+        async function carousel(carouselList, eleRef) {
+            var i = 0;
+            while (true) {
+                updateFontColor(eleRef, carouselList[i].color)
+                await typeSentence(carouselList[i].text, eleRef);
+                await waitForMs(1500);
+                await deleteSentence(eleRef);
+                await waitForMs(500);
+                i++
+                if (i >= carouselList.length) { i = 0; }
+            }
+        }
+
+        function updateFontColor(eleRef, color) {
+            $(eleRef).css('color', color);
+        }
+
+        function waitForMs(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+    </script>
+</body>
+
+</html>
